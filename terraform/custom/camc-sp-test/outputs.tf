@@ -9,5 +9,5 @@ output "full_result" {
 }
 
 output "resource id" {
-  value = "${lookup(camc_scriptpackage.create_test_resource.result, resource_id)}"
+  value = "${lookup(camc_scriptpackage.create_test_resource.result, "resource_id")}"
 }
