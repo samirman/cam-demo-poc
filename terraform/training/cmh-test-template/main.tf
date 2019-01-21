@@ -41,3 +41,14 @@ resource "aws_key_pair" "auth" {
 
 resource "random_pet" "citi-pet" {
 }
+
+resource "aws_ebs_volume" "cmh-citi-vol" {
+    availability_zone = "${var.availability_zone}"
+    size              = "${var.cmh-citi-vol_volume_size}"
+}
+
+resource "aws_volume_attachment" "cmh-citi-vm_cmh-citi-vol_volume_attachment" {
+  device_name = "/dev/sdh"
+  volume_id   = "${aws_ebs_volume.cmh-citi-vol.id}"
+  instance_id = "${aws_instance.cmh-citi-vm.id}"
+}

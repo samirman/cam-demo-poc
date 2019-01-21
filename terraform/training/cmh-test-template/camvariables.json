@@ -22,6 +22,10 @@
     {
       "name": "aws_instance_networks",
       "label": "aws_instance Networks"
+    },
+    {
+      "name": "aws_ebs_volume_storage",
+      "label": "aws_ebs_volume Storage"
     }
   ],
   "output_groups": [ ],
@@ -110,6 +114,20 @@
       "hidden": false,
       "immutable": false,
       "immutable_after_create": false
+    },
+    {
+      "name": "cmh-citi-vol_volume_size",
+      "label": "Cmh Citi Vol Volume Size",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "aws_ebs_volume_storage",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
     }
   ],
   "template_output_params": [
@@ -130,7 +148,8 @@
       "group_name": "",
       "secured": false,
       "hidden": false,
-      "shortname": ""
+      "shortname": "",
+      "type": "string"
     }
   ]
 }

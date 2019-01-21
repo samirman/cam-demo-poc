@@ -30,3 +30,8 @@ variable "vpc_id" {
   description = "Generated"
 }
 
+variable "cmh-citi-vol_volume_size" {
+  type = "string"
+  description = "Generated"
+}
+
