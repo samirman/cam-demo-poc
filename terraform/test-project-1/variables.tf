@@ -34,3 +34,14 @@ variable "vpc_id" {
   description = "Generated"
 }
 
+variable "testprojvol1_volume_size" {
+  type = "string"
+  description = "Generated"
+}
+
+variable "group_name" {
+  type = "string"
+  description = "Generated"
+}
+
+
