@@ -1,6 +1,6 @@
-## test-project-1 infrastructure
+## cmh-test-template infrastructure
 
-Created 1/21/19 by admin. for test-project-1
+Created 1/21/19 by admin. for cmh-test-template
 
 
 ## Design Decisions

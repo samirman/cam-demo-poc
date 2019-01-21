@@ -4,8 +4,8 @@
   "output_namespace": "",
   "input_groups": [
     {
-      "name": "Instances-aws_instance.test-instance",
-      "label": "Instances - aws_instance.test-instance"
+      "name": "Instances-aws_instance.cmh-citi-vm",
+      "label": "Instances - aws_instance.cmh-citi-vm"
     },
     {
       "name": "Other",
@@ -22,21 +22,13 @@
     {
       "name": "aws_instance_networks",
       "label": "aws_instance Networks"
-    },
-    {
-      "name": "aws_ebs_volume_storage",
-      "label": "aws_ebs_volume Storage"
-    },
-    {
-      "name": "security",
-      "label": "Security"
     }
   ],
   "output_groups": [ ],
   "template_input_params": [
     {
-      "name": "test-instance_ami",
-      "label": "Test Instance Ami",
+      "name": "cmh-citi-vm_ami",
+      "label": "Cmh Citi Vm Ami",
       "description": "Generated",
       "type": "string",
       "default": "",
@@ -49,8 +41,8 @@
       "immutable_after_create": false
     },
     {
-      "name": "test-instance_aws_instance_type",
-      "label": "Test Instance Aws Instance Type",
+      "name": "cmh-citi-vm_aws_instance_type",
+      "label": "Cmh Citi Vm Aws Instance Type",
       "description": "Generated",
       "type": "string",
       "default": "",
@@ -74,25 +66,26 @@
       "secured": false,
       "hidden": false,
       "immutable": false,
-      "immutable_after_create": false
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "us-east-1a",
+          "label": "us-east-1a",
+          "default": true
+        },
+        {
+          "value": "us-east-1b",
+          "label": "us-east-1b"
+        },
+        {
+          "value": "us-east-1d",
+          "label": "us-east-1d"
+        }
+      ]
     },
     {
-      "name": "test-instance_name",
-      "label": "Test Instance Name",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "instances",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "aws_key_pair_name",
-      "label": "Aws Key Pair Name",
+      "name": "cmh-citi-vm_name",
+      "label": "Cmh Citi Vm Name",
       "description": "Generated",
       "type": "string",
       "default": "",
@@ -106,46 +99,38 @@
     },
     {
       "name": "vpc_id",
-      "label": "Vpc Id",
+      "label": "vpc_id",
       "description": "Generated",
       "type": "string",
       "default": "",
       "validation": "",
       "group_name": "",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "testprojvol1_volume_size",
-      "label": "Testprojvol 1 Volume Size",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "aws_ebs_volume_storage",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "group_name",
-      "label": "Group Name",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "security",
-      "required": true,
+      "required": false,
       "secured": false,
       "hidden": false,
       "immutable": false,
       "immutable_after_create": false
     }
   ],
-  "template_output_params": [ ]
+  "template_output_params": [
+    {
+      "name": "public IP address",
+      "label": "public IP address",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "pet_name",
+      "label": "pet_name",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    }
+  ]
 }
