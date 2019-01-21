@@ -4,3 +4,10 @@
 ##
 #####################################################################
 
+output "full_result" {
+  value = "${camc_scriptpackage.create_test_resource.result}"
+}
+
+output "resource id" {
+  value = "${lookup(camc_scriptpackage.create_test_resource.result, resource_id)}"
+}

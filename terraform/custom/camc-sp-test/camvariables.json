@@ -1,5 +1,8 @@
 {
-  "input_datatypes": [ ],
+  "input_datatypes": [  {
+    "name": "ucd_connection",
+    "label": "UCD connection"
+  } ],
   "input_namespaces": [ ],
   "output_namespace": "",
   "input_groups": [  { "name": "Other", "label": "Other" } ],
@@ -10,7 +13,7 @@
       "label": "Ucd User",
       "description": "UCD User.",
       "type": "string",
-      "default": "admin",
+      "default": "${ucd_connection.ucd_user}",
       "validation": "",
       "group_name": "",
       "required": true,
@@ -24,11 +27,11 @@
       "label": "Ucd Password",
       "description": "UCD Password.",
       "type": "string",
-      "default": "",
+      "default": "${ucd_connection.ucd_password}",
       "validation": "",
       "group_name": "",
       "required": true,
-      "secured": false,
+      "secured": true,
       "hidden": false,
       "immutable": false,
       "immutable_after_create": false
@@ -38,7 +41,7 @@
       "label": "Ucd Host",
       "description": "UCD Server URL",
       "type": "string",
-      "default": "",
+      "default": "${ucd_connection.ucd_hostname}",
       "validation": "",
       "group_name": "",
       "required": true,
@@ -76,5 +79,26 @@
       "immutable_after_create": false
     }
   ],
-  "template_output_params": [ ]
+  "template_output_params": [
+    {
+      "name": "full_result",
+      "label": "Full Result",
+      "description": "Full Result",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "resource id",
+      "label": "Resource Id",
+      "description": "Resource Id",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
 }
