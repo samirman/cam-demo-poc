@@ -1,0 +1,132 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Instances-aws_instance.foo-instance",
+      "label": "Instances - aws_instance.foo-instance"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "Other-aws",
+      "label": "Other - aws"
+    },
+    {
+      "name": "aws_instance_networks",
+      "label": "aws_instance Networks"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "foo-instance_ami",
+      "label": "Foo Instance Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Instances-aws_instance.foo-instance",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "foo-instance_aws_instance_type",
+      "label": "Foo Instance Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Instances-aws_instance.foo-instance",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Instances-aws_instance.foo-instance",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "us-east-1a",
+          "label": "us-east-1a",
+          "default": true
+        },
+        {
+          "value": "us-east-1b",
+          "label": "us-east-1b"
+        },
+        {
+          "value": "us-east-1d",
+          "label": "us-east-1d"
+        }
+      ]
+    },
+    {
+      "name": "foo-instance_name",
+      "label": "Foo Instance Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Instances-aws_instance.foo-instance",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "vpc_id",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "public_ip",
+      "label": "public_ip",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "instance_id",
+      "label": "instance_id",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    }
+  ]
+}

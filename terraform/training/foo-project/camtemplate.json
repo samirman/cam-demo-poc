@@ -1,0 +1,14 @@
+{
+   "name": "foo-project",
+   "description": "Description for foo-project.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Amazon EC2"
+   },
+   "metadata": {
+     "displayName": "foo-project",
+     "bullets": []
+   }
+ }
