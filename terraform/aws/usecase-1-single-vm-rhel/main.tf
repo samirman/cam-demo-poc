@@ -30,18 +30,27 @@ resource "aws_instance" "citi-rhel-vm" {
   instance_type = "${var.citi-rhel-vm_aws_instance_type}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
   vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
-  tags {
-    Name = "${var.citi-rhel-vm_name}"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.citi-rhel-vm_name}"
+    )
+  )}"
 }
 
 
 # Create 0-4 additional volumes
 resource "aws_ebs_volume" "extra-volumes" {
-    count             = "${var.volume_count}"
-    availability_zone = "${var.availability_zone}"
-    size              = "${var.volume_size}"
-    type              = "gp2"
+  count             = "${var.volume_count}"
+  availability_zone = "${var.availability_zone}"
+  size              = "${var.volume_size}"
+  type              = "gp2"
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "volume"
+    )
+  )}"
 }
 
 # TODO make the device names a variable or local
@@ -50,4 +59,8 @@ resource "aws_volume_attachment" "citi-rhel-vm_volume_name_volume_attachment" {
   device_name = "${element(split(",", "/dev/sdb,/dev/sdc,/dev/sdd,/dev/sde"), count.index)}"
   volume_id =   "${element(aws_ebs_volume.extra-volumes.*.id, count.index)}"
   instance_id = "${aws_instance.citi-rhel-vm.id}"
+}
+
+module "camtags" {
+  source = "./Modules/camtags"
 }
