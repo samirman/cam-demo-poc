@@ -11,19 +11,26 @@ terraform {
 #########################################################
 # Build network
 #########################################################
+
 resource "aws_vpc" "default" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
-#  tags = "${merge(map("Name", "${var.network_name_prefix}-vpc"), ${module.camtags.tagsmap})}"
-  tags = "${module.camtags.tagsmap}"
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-vpc")"
+    )
+  )}"
 }
 
 resource "aws_internet_gateway" "default" {
   vpc_id = "${aws_vpc.default.id}"
-
-  tags {
-    Name = "${var.network_name_prefix}-gateway"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-gateway")"
+    )
+  )}"
 }
 
 resource "aws_subnet" "subnet1" {
