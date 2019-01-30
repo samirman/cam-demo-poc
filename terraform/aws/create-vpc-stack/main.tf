@@ -18,7 +18,7 @@ resource "aws_vpc" "default" {
   tags = "${merge(
     module.camtags.tagsmap,
     map(
-      "Name", "${var.network_name_prefix}-vpc")"
+      "Name", "${var.network_name_prefix}-vpc"
     )
   )}"
 }
@@ -28,7 +28,7 @@ resource "aws_internet_gateway" "default" {
   tags = "${merge(
     module.camtags.tagsmap,
     map(
-      "Name", "${var.network_name_prefix}-gateway")"
+      "Name", "${var.network_name_prefix}-gateway"
     )
   )}"
 }
