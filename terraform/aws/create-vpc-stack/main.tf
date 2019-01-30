@@ -37,30 +37,36 @@ resource "aws_subnet" "subnet1" {
   vpc_id            = "${aws_vpc.default.id}"
   cidr_block        = "10.0.1.0/24"
   availability_zone = "us-east-1a"
-
-  tags {
-    Name = "${var.network_name_prefix}-subnet"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-subnet"
+    )
+  )}"
 }
 
 resource "aws_subnet" "subnet2" {
   vpc_id            = "${aws_vpc.default.id}"
   cidr_block        = "10.0.2.0/24"
   availability_zone = "us-east-1b"
-
-  tags {
-    Name = "${var.network_name_prefix}-subnet2"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-subnet2"
+    )
+  )}"
 }
 
 resource "aws_subnet" "subnet3" {
   vpc_id            = "${aws_vpc.default.id}"
   cidr_block        = "10.0.3.0/24"
   availability_zone = "us-east-1d"
-
-  tags {
-    Name = "${var.network_name_prefix}-subnet3"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-subnet3"
+    )
+  )}"
 }
 
 resource "aws_route_table" "default" {
@@ -70,10 +76,12 @@ resource "aws_route_table" "default" {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.default.id}"
   }
-
-  tags {
-    Name = "${var.network_name_prefix}-route-table"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-routetable"
+    )
+  )}"
 }
 
 resource "aws_route_table_association" "primary" {
@@ -144,10 +152,12 @@ resource "aws_security_group" "application" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  tags {
-    Name = "${var.network_name_prefix}-security-group-application"
-  }
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-security-group-application"
+    )
+  )}"
 }
 
 module "camtags" {
