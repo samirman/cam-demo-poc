@@ -9,9 +9,9 @@ terraform {
 }
 
 provider "aws" {
-#  assume_role {
-#    role_arn = "${var.role_arn}"
-#  }
+  assume_role {
+    role_arn = "${var.role_arn}"
+  }
 }
 
 data "aws_s3_bucket" "selected" {
