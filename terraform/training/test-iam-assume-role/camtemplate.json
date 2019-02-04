@@ -1,0 +1,14 @@
+{
+   "name": "test-iam-assume-role",
+   "description": "Description for test-iam-assume-role.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "test-iam-assume-role",
+     "bullets": []
+   }
+ }
