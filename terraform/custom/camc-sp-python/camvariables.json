@@ -82,6 +82,16 @@
       "hidden": false,
       "shortname": "",
       "type": "string"
+    },
+    {
+      "name": "rest_response",
+      "label": "Rest Response",
+      "description": "Rest Response",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
     }
   ]
 }

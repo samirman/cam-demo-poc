@@ -12,6 +12,6 @@ output "resource_name" {
     value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "resource_name")}"
 }
 
-#output "rest_response" {
-#    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "all")}"
-#}
+output "rest_response" {
+    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "all")}"
+}
