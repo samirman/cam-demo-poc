@@ -9,7 +9,7 @@ terraform {
 }
 
 resource "camc_scriptpackage" "create_efs_export" {
-  program = ["/usr/bin/python", "${path.module}/scripts/test-python.py"]
+  program = ["/usr/bin/python", "${path.module}/scripts/test_python.py"]
   on_create = true
 }
 
