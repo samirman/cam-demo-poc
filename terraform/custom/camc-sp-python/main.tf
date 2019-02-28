@@ -8,8 +8,9 @@ terraform {
   required_version = "> 0.8.0"
 }
 
-resource "camc_scriptpackage" "create_efs_export" {
-  program = ["/usr/bin/python", "${path.module}/scripts/test_python.py"]
+resource "camc_scriptpackage" "create_ucd_resource" {
+  program = ["/usr/bin/python", "${path.module}/scripts/test_python.py", "${var.ucd_host}", "${var.resource_name}", "${var.ucd_user}" ]
+  program_sensitive = ["${var.ucd_password}"]
   on_create = true
 }
 

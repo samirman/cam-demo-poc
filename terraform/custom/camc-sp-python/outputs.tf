@@ -4,6 +4,14 @@
 ##
 #####################################################################
 
-output "dcList" {
-    value = "${lookup(camc_scriptpackage.create_efs_export.result, "dcList")}"
+output "resource_id" {
+    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "resource_id")}"
+}
+
+output "resource_name" {
+    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "resource_name")}"
+}
+
+output "rest_response" {
+    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "all")}"
 }
