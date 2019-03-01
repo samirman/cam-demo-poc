@@ -23,7 +23,8 @@ resource_id = data['id']
 returnObj = {}
 returnObj['resource_id'] = resource_id
 returnObj['resource_name'] = resource_name
-returnObj['dclist'] = ['mwdc', 'gtdc']
+#returnObj['dclist'] = ['mwdc', 'gtdc']
+returnObj['dclist'] = json.dumps(['mwdc', 'gtdc'])
 returnObj['all']=json.dumps(data) 
 
 print(json.dumps(returnObj))
