@@ -17,13 +17,13 @@ output "rest_response" {
 }
 
 output "dcliststr" {
-    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "dclist")}"
+    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "dcliststr")}"
 }
 
 output "dclist" {
-    value = "${list(lookup(camc_scriptpackage.create_ucd_resource.result, "dclist"))}"
+    value = "${split(",", lookup(camc_scriptpackage.create_ucd_resource.result, "dcliststr"))}"
 }
 
 output "dclist-zero" {
-    value = "${list(lookup(camc_scriptpackage.create_ucd_resource.result, "dclist"))[0]}"
+    value = "${element(split(",", lookup(camc_scriptpackage.create_ucd_resource.result, "dcliststr")), 0}"
 }
