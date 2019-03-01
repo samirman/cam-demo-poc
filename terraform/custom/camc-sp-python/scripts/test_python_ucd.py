@@ -20,11 +20,15 @@ r = requests.put(url=path, data=json.dumps(PARAMS), verify=False, auth=http_basi
 data = r.json()
 resource_id = data['id']
 
+dclist = ['mwdc', 'gtdc']
+dcliststr = ','.join(dclist)
+
 returnObj = {}
 returnObj['resource_id'] = resource_id
 returnObj['resource_name'] = resource_name
 #returnObj['dclist'] = ['mwdc', 'gtdc']
-returnObj['dclist'] = json.dumps(['mwdc', 'gtdc'])
+#returnObj['dclist'] = json.dumps(['mwdc', 'gtdc'])
+returnObj['dclist'] = dcliststr
 returnObj['all']=json.dumps(data) 
 
 print(json.dumps(returnObj))

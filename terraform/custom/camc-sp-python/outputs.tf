@@ -16,6 +16,14 @@ output "rest_response" {
     value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "all")}"
 }
 
-output "dclist" {
+output "dcliststr" {
     value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "dclist")}"
+}
+
+output "dclist" {
+    value = "${list(lookup(camc_scriptpackage.create_ucd_resource.result, "dclist"))}"
+}
+
+output "dclist-zero" {
+    value = "${list(lookup(camc_scriptpackage.create_ucd_resource.result, "dclist"))[0]}"
 }

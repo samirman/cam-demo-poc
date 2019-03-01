@@ -94,9 +94,29 @@
       "type": "string"
     },
     {
+      "name": "dcliststr",
+      "label": "Dcliststr",
+      "description": "Dcliststr",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
       "name": "dclist",
       "label": "Dclist",
       "description": "Dclist",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "dclist-zero",
+      "label": "Dclist Zero",
+      "description": "Dclist Zero",
       "group_name": "",
       "secured": false,
       "hidden": false,
