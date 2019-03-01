@@ -25,5 +25,5 @@ output "dclist" {
 }
 
 output "dclist-zero" {
-    value = "${element(split(",", lookup(camc_scriptpackage.create_ucd_resource.result, "dcliststr")), 0}"
+    value = "${element(split(",", lookup(camc_scriptpackage.create_ucd_resource.result, "dcliststr")), 0)}"
 }
