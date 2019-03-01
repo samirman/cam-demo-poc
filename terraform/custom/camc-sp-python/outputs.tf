@@ -15,3 +15,7 @@ output "resource_name" {
 output "rest_response" {
     value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "all")}"
 }
+
+output "dclist" {
+    value = "${lookup(camc_scriptpackage.create_ucd_resource.result, "dclist")}"
+}

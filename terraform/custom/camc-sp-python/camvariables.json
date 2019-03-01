@@ -92,6 +92,16 @@
       "hidden": false,
       "shortname": "",
       "type": "string"
+    },
+    {
+      "name": "dclist",
+      "label": "Dclist",
+      "description": "Dclist",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
     }
   ]
 }
