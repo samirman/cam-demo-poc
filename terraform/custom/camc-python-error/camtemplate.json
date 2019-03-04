@@ -1,0 +1,14 @@
+{
+   "name": "camc-sp-python",
+   "description": "Description for camc-sp-python.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "camc-sp-python",
+     "bullets": []
+   }
+ }

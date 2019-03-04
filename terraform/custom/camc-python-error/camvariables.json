@@ -1,0 +1,107 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [  { "name": "Other", "label": "Other" } ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "UCD User",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_host",
+      "label": "Ucd Host",
+      "description": "UCD Server URL",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "resource_name",
+      "label": "Resource Name",
+      "description": "New resource name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "resource_id",
+      "label": "Resource Id",
+      "description": "Resource Id",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "resource_name",
+      "label": "Resource Name",
+      "description": "Resource Name",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "rest_response",
+      "label": "Rest Response",
+      "description": "Rest Response",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "dcliststr",
+      "label": "Dcliststr",
+      "description": "Dcliststr",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}
