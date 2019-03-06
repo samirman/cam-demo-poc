@@ -1,0 +1,14 @@
+{
+   "name": "test-data-types",
+   "description": "Description for test-data-types.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "test-data-types",
+     "bullets": []
+   }
+ }
