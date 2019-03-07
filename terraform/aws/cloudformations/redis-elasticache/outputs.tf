@@ -4,3 +4,14 @@
 ##
 #####################################################################
 
+output "jdbc_connection_string" {
+  value = "${aws_cloudformation_stack.redis-elasticache-cfn.outputs["RGEndpoint"]}"
+}
+
+output "cloudformations_stack_id" {
+  value = "${aws_cloudformation_stack.redis-elasticache-cfn.id}"
+}
+
+output "cloudformations_stack_name" {
+  value = "redis-test-${random_pet.stack_id.id}"
+}

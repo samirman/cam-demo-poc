@@ -180,5 +180,36 @@
       "immutable_after_create": false
     }
   ],
-  "template_output_params": [ ]
+  "template_output_params": [
+    {
+      "name": "jdbc_connection_string",
+      "label": "Jdbc Connection String",
+      "description": "Jdbc Connection String",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "cloudformations_stack_id",
+      "label": "Cloudformations Stack Id",
+      "description": "Cloudformations Stack Id",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "cloudformations_stack_name",
+      "label": "Cloudformations Stack Name",
+      "description": "Cloudformations Stack Name",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
 }
