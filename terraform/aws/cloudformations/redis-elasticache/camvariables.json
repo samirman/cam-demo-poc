@@ -182,9 +182,9 @@
   ],
   "template_output_params": [
     {
-      "name": "jdbc_connection_string",
-      "label": "Jdbc Connection String",
-      "description": "Jdbc Connection String",
+      "name": "redis_endpoint",
+      "label": "Redis Endpoint",
+      "description": "Redis Endpoint",
       "group_name": "",
       "secured": false,
       "hidden": false,

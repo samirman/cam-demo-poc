@@ -4,7 +4,7 @@
 ##
 #####################################################################
 
-output "jdbc_connection_string" {
+output "redis_endpoint" {
   value = "${aws_cloudformation_stack.redis-elasticache-cfn.outputs["RGEndpoint"]}"
 }
 
