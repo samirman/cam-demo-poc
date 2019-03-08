@@ -1,0 +1,38 @@
+[
+  {
+    "name": "vpc_id",
+    "type": "string",
+    "description": "VPC ID",
+    "label": "vpc_id",
+    "required": "true",
+    "secured": "false",
+    "immutable": "false",
+    "hidden": "false",
+    "default": "",
+    "options": null
+  },
+  {
+    "name": "subnet_1",
+    "type": "string",
+    "description": "Subnet in AZ 1",
+    "label": "subnet_1",
+    "required": "true",
+    "secured": "false",
+    "immutable": "false",
+    "hidden": "false",
+    "default": "",
+    "options": null
+  },
+  {
+    "name": "subnet_2",
+    "type": "string",
+    "description": "Subnet in AZ 2",
+    "label": "subnet_2",
+    "required": "true",
+    "secured": "false",
+    "immutable": "false",
+    "hidden": "false",
+    "default": "",
+    "options": null
+  }
+]
