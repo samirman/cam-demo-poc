@@ -16,3 +16,7 @@ curlrespo=$(curl -k \
        -X DELETE "${PARAM_UCDHOST}/cli/resource/deleteResource?resource=${PARAM_RES_ID}"  2>/dev/null)
 
 echo "${curlrespo}"
+
+return_result="{\"resource_id\": \"${PARAM_RES_NAME}\"}"
+
+echo $return_result
