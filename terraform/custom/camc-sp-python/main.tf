@@ -18,6 +18,6 @@ resource "camc_scriptpackage" "create_ucd_resource" {
 resource "camc_scriptpackage" "delete_ucd_resource" {
   depends_on = ["camc_scriptpackage.create_ucd_resource"]
   program = ["/usr/bin/python", "${path.module}/scripts/test-delete.py", "${var.ucd_host}", "${lookup(camc_scriptpackage.create_ucd_resource.result, "resource_id")}", "${var.ucd_user}" ]
-  program_sensitive = ["-p", "${var.ucd_password}"]
+  program_sensitive = ["${var.ucd_password}"]
   on_delete = true
 }
