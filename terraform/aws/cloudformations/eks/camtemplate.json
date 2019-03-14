@@ -1,6 +1,6 @@
 {
-   "name": "rds-postgres",
-   "description": "Description for rds-postgres.",
+   "name": "eks-cloud-formations",
+   "description": "Deploy and EKS cluster via cloud formations.",
    "type": "userCreated",
    "manifest": {
      "template_type": "Terraform",
@@ -8,7 +8,7 @@
      "template_provider": "Amazon EC2"
    },
    "metadata": {
-     "displayName": "rds-postgres",
+     "displayName": "eks-cloud-formations",
      "bullets": []
    }
  }
