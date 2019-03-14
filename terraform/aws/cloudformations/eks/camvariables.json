@@ -1,12 +1,8 @@
 {
   "input_datatypes": [
     {
-      "name": "rds_postgres_data",
-      "label": "RDS postgres data"
-    },
-    {
       "name": "eks_data",
-      "label": null
+      "label": "EKS data"
     }
   ],
   "input_namespaces": [ ],
