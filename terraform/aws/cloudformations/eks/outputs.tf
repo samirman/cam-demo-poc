@@ -17,5 +17,5 @@ output "cloudformations_stack_id" {
 }
 
 output "cloudformations_stack_name" {
-  value = "rds-test-${random_pet.stack_id.id}"
+  value = "eks-${random_pet.stack_id.id}"
 }
