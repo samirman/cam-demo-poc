@@ -1,0 +1,144 @@
+{
+  "input_datatypes": [
+    {
+      "name": "rds_postgres_data",
+      "label": "RDS postgres data"
+    },
+    {
+      "name": "eks_data",
+      "label": null
+    }
+  ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [  { "name": "Other", "label": "Other" } ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "cluster-name",
+      "label": "Cluster Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "my-eks-cluster",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "role_arn",
+      "label": "Role Arn",
+      "description": "Generated",
+      "type": "string",
+      "default": "${eks_data.role_arn}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "subnet_a",
+      "label": "Subnet A",
+      "description": "Generated",
+      "type": "string",
+      "default": "${eks_data.subnet_1}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "subnet_b",
+      "label": "Subnet B",
+      "description": "Generated",
+      "type": "string",
+      "default": "${eks_data.subnet_2}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "sec_group",
+      "label": "sec_group",
+      "description": "Generated",
+      "type": "string",
+      "default": "${eks_data.security_group}",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "version",
+      "label": "version",
+      "description": "Generated",
+      "type": "string",
+      "default": "1.10",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "kube_api_endpoint",
+      "label": "Kube Api Endpoint",
+      "description": "Kube Api Endpoint",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "cluster_arn",
+      "label": "Cluster Arn",
+      "description": "Cluster Arn",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "cloudformations_stack_id",
+      "label": "Cloudformations Stack Id",
+      "description": "Cloudformations Stack Id",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "cloudformations_stack_name",
+      "label": "Cloudformations Stack Name",
+      "description": "Cloudformations Stack Name",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Description":"AWS CloudFormation Template for EKS",
+  "Parameters":{
+    "SubnetA": {
+        "Description": "Subnet A",
+        "Type": "AWS::EC2::Subnet::Id"
+    },
+    "SubnetB": {
+        "Description": "Subnet B",
+        "Type": "AWS::EC2::Subnet::Id"
+    },
+    "SecurityGroup":{
+      "Type":"String",
+      "Description":"The security group ID"
+    },
+    "ClusterName":{
+      "Default":"MyCluster",
+      "Description":"The cluster name",
+      "Type":"String"
+    },
+    "RoleARN":{
+      "Description":"IAM ARN role",
+      "Type":"String"
+    },
+    "Version":{
+      "Description":"The Kubernetes server version for the cluster.",
+      "Type":"String",
+      "Default":"1.10"
+    }
+  },
+  "Resources":{
+    "MyEKSCluster":{
+      "Type":"AWS::EKS::Cluster",
+      "Properties":{
+        "Name":{
+          "Ref":"ClusterName"
+        },
+        "Version":{
+          "Ref":"Version"
+        },
+        "RoleArn":{
+          "Ref":"RoleARN"
+        },
+        "ResourcesVpcConfig": {
+          "SecurityGroupIds": [
+            {
+                "Ref": "SecurityGroup"
+            }
+          ],
+          "SubnetIds": [
+            {
+                "Ref": "SubnetA"
+            },
+            {
+                "Ref": "SubnetB"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Outputs":{
+    "APIEndpoint":{
+      "Description":"kubernetes API endpoint",
+      "Value":{
+        "Fn::GetAtt":[
+          "MyEKSCluster",
+          "Endpoint"
+        ]
+      }
+    },
+    "ClusterARN":{
+      "Description":"The ARN of the cluster",
+      "Value":{
+        "Fn::GetAtt":[
+          "MyEKSCluster",
+          "Arn"
+        ]
+      }
+    }
+  }
+}

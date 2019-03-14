@@ -1,0 +1,55 @@
+{
+    "name": "eks_data",
+    "label": "EKS data",
+    "description": "Data necessary for deploying an EKS cluster",
+    "attributes": [
+        {
+          "name": "subnet_1",
+          "type": "string",
+          "description": "Subnet in AZ 1",
+          "label": "subnet_1",
+          "required": "true",
+          "secured": "false",
+          "immutable": "false",
+          "hidden": "false",
+          "default": "",
+          "options": null
+        },
+        {
+          "name": "subnet_2",
+          "type": "string",
+          "description": "Subnet in AZ 2",
+          "label": "subnet_2",
+          "required": "true",
+          "secured": "false",
+          "immutable": "false",
+          "hidden": "false",
+          "default": "",
+          "options": null
+      },
+      {
+          "name": "security_group",
+          "type": "string",
+          "description": "Security group",
+          "label": "security group",
+          "required": "true",
+          "secured": "false",
+          "immutable": "false",
+          "hidden": "false",
+          "default": "",
+          "options": null
+      },
+      {
+          "name": "role_arn",
+          "type": "string",
+          "description": "Role ARN for EKS cluster",
+          "label": "Role ARN",
+          "required": "true",
+          "secured": "false",
+          "immutable": "false",
+          "hidden": "false",
+          "default": "",
+          "options": null
+      }
+    ]
+}
