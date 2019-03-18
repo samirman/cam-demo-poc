@@ -1,0 +1,14 @@
+{
+   "name": "simple-status-test",
+   "description": "Description for simple-status-test.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "simple-status-test",
+     "bullets": []
+   }
+ }
