@@ -29,6 +29,6 @@ returnObj['resource_name'] = resource_name
 returnObj['dclist'] = ['mwdc', 'gtdc']
 #returnObj['dclist'] = json.dumps(['mwdc', 'gtdc'])
 #returnObj['dclist'] = dcliststr
-r#eturnObj['all']=json.dumps(data) 
+#returnObj['all']=json.dumps(data) 
 
 print(json.dumps(returnObj))

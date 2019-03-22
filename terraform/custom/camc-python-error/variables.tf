@@ -13,15 +13,17 @@ variable "ucd_user" {
 variable "ucd_password" {
   type = "string"
   description = "UCD Password"
+  default = "ec11ipse"
 }
 
 variable "ucd_host" {
   type = "string"
   description = "UCD Server URL"
+  default = "http://icdemo3.cloudy-demos.com:9080"
 }
 
 variable "resource_name" {
   type = "string"
   description = "New resource name"
-  default = "test-resource-python-1"
+  default = "py-aa"
 }
