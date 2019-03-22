@@ -99,16 +99,6 @@
       "hidden": false,
       "shortname": "",
       "type": "string"
-    },
-    {
-      "name": "resource_id_output",
-      "label": "Resource Id Output",
-      "description": "Resource Id Output",
-      "group_name": "",
-      "secured": false,
-      "hidden": false,
-      "shortname": "",
-      "type": "string"
     }
   ]
 }
