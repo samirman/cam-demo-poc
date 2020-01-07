@@ -24,16 +24,16 @@ data "aws_security_group" "group_name" {
   vpc_id = "${var.vpc_id}"
 }
 
-resource "aws_instance" "citi-rhel-vm" {
-  ami = "${var.citi-rhel-vm_ami}"
+resource "aws_instance" "test-rhel-vm" {
+  ami = "${var.test-rhel-vm_ami}"
   key_name = "${var.aws_key_pair_name}"  # Generated
-  instance_type = "${var.citi-rhel-vm_aws_instance_type}"
+  instance_type = "${var.test-rhel-vm_aws_instance_type}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
   vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
   tags = "${merge(
     module.camtags.tagsmap,
     map(
-      "Name", "${var.citi-rhel-vm_name}"
+      "Name", "${var.test-rhel-vm_name}"
     )
   )}"
 }
