@@ -12,7 +12,7 @@
     "label": "Network Name Prefix",
     "description": "The prefix of names for VPC, Gateway, Subnet and Security Group",
     "type": "string",
-    "default": "citi-vpc",
+    "default": "test-vpc",
     "validation": "",
     "group_name": "network-settings",
     "required": true,
