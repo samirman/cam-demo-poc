@@ -6,10 +6,10 @@
 
 # RHEL VM public IP address
 output "public_ip_address" {
-  value = "${aws_instance.citi-rhel-vm.public_ip}"
+  value = "${aws_instance.test-rhel-vm.public_ip}"
 }
 
 # RHEL VM instance ID
 output "instance_id" {
-  value = "${aws_instance.citi-rhel-vm.id}"
+  value = "${aws_instance.test-rhel-vm.id}"
 }
