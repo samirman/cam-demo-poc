@@ -6,5 +6,5 @@
 
 variable "network_name_prefix" {
   description = "The prefix of names for VPC, Gateway, Subnet and Security Group"
-  default     = "citi-vpc"
+  default     = "test-vpc"
 }
