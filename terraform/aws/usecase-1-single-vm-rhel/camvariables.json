@@ -23,7 +23,7 @@
   "output_groups": [ ],
   "template_input_params": [
     {
-      "name": "citi-rhel-vm_ami",
+      "name": "test-rhel-vm_ami",
       "label": "Instance AMI",
       "description": "AMI for RHEL instance",
       "type": "string",
@@ -37,7 +37,7 @@
       "immutable_after_create": false
     },
     {
-      "name": "citi-rhel-vm_aws_instance_type",
+      "name": "test-rhel-vm_aws_instance_type",
       "label": "Instance size",
       "description": "Size of instance to create",
       "type": "string",
@@ -66,11 +66,11 @@
       ]
     },
     {
-      "name": "citi-rhel-vm_name",
+      "name": "test-rhel-vm_name",
       "label": "VM Name tag",
       "description": "Instance name tag",
       "type": "string",
-      "default": "Citi RHEL VM",
+      "default": "Test RHEL VM",
       "validation": "",
       "group_name": "instance-settings",
       "required": true,
