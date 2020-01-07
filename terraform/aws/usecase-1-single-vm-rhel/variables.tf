@@ -4,17 +4,17 @@
 ##
 #####################################################################
 
-variable "citi-rhel-vm_ami" {
+variable "test-rhel-vm_ami" {
   type = "string"
   description = "RHEL 7.6 AMI"
 }
 
-variable "citi-rhel-vm_aws_instance_type" {
+variable "test-rhel-vm_aws_instance_type" {
   type = "string"
   description = "type"
 }
 
-variable "citi-rhel-vm_name" {
+variable "test-rhel-vm_name" {
   type = "string"
   description = "VM name"
 }
