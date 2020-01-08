@@ -69,6 +69,18 @@ resource "aws_subnet" "subnet3" {
   )}"
 }
 
+resource "aws_subnet" "subnet4" {
+  vpc_id            = "${aws_vpc.default.id}"
+  cidr_block        = "10.0.4.0/24"
+  availability_zone = "us-east-1d"
+  tags = "${merge(
+    module.camtags.tagsmap,
+    map(
+      "Name", "${var.network_name_prefix}-subnet4"
+    )
+  )}"
+}
+
 resource "aws_route_table" "default" {
   vpc_id = "${aws_vpc.default.id}"
 
