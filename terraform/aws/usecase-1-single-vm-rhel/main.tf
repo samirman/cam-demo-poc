@@ -54,11 +54,11 @@ resource "aws_ebs_volume" "extra-volumes" {
 }
 
 # TODO make the device names a variable or local
-resource "aws_volume_attachment" "citi-rhel-vm_volume_name_volume_attachment" {
+resource "aws_volume_attachment" "test-rhel-vm_volume_name_volume_attachment" {
   count             = "${var.volume_count}"
   device_name = "${element(split(",", "/dev/sdb,/dev/sdc,/dev/sdd,/dev/sde"), count.index)}"
   volume_id =   "${element(aws_ebs_volume.extra-volumes.*.id, count.index)}"
-  instance_id = "${aws_instance.citi-rhel-vm.id}"
+  instance_id = "${aws_instance.test-rhel-vm.id}"
 }
 
 module "camtags" {
